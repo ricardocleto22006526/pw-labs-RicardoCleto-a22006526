@@ -1,8 +1,12 @@
 Nome do Repositório: pw-labs-RicardoCleto-a22006526
 
 Ricardo Casaca Cleto
+
 Nrº Aluno: a22006526
+
 Laboratório Quarta-Feira 10-12h (Turma LEI 01)
+
+============================================================================
 
 Link enunciado Lab1: https://github.com/ULHT-PW/pw-lab1 
 
