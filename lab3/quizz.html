@@ -50,11 +50,11 @@
                         <legend> Quizz</legend>
 
                         <p>
-                            <label for="pergunta1">Insira a sigla de Los Angeles:</label><br>
-                            <input type="text" id="pergunta1" name="Sigla" ><br>
+                            <label for="pergunta1">1) Insira a sigla de Los Angeles:</label><br>
+                            <input type="text" id="pergunta1" name="Sigla"><br>
                         </p>
 
-                        <legend> Qual a população de Los Angeles:</legend>
+                        <legend> 2) Qual a população de Los Angeles:</legend>
                         <p>
                             <input type="radio" id="pergunta2.1" name="pergunta2" value="pop:">
                             <label for="pergunta2.1"> 3,898,747 </label><br>
@@ -66,10 +66,46 @@
                             <label for="pergunta2.3"> 4,312,432 </label><br>
                         </p>
 
+                        <legend> 3) Área total (dimensão km²):</legend>
+                        <p>
+                            <input type="checkbox" id="pergunta3.1" name="pergunta3" value="KMTotal:">
+                            <label for="pergunta3.1"> + de 1 200 km² </label><br>
+
+                            <input type="checkbox" id="pergunta3.2" name="pergunta3" value="KMTotal:">
+                            <label for="pergunta3.2"> - 1000 km² </label><br>
+
+                            <input type="checkbox" id="pergunta3.3" name="pergunta3" value="KMTotal:">
+                            <label for="pergunta3.3"> Entre 1000 a 1200 km² </label><br>
+                        </p>
+
+                        <legend> 4) Indique a data em que Los Angeles foi "fundada"</legend>
+                        <p>
+                            <label for="pergunta4">Data ➥</label>
+                            <input type="date" id="pergunta4" name="pergunta4" min="1800-01-01"><br>
+                        </p>
+
+                        <p>
+                            <label for="pergunta5"> 5) Choose a color just for fun</label>
+                            <input type="color" id="pergunta5" name="pergunta5" value="color:">
+                        </p>
+
+                        <legend> 6) Quantos estados tem o US:</legend>
+                        <p>
+                            <label for="pergunta6">Quantidade ➥</label>
+                            <input type="number" id="pergunta6" name="pergunta6" min="0" max="100" step="10">
+                        </p>
+
+                        <legend> 7) Qual o ponto mais elevado de Los Angeles?</legend>
+                        <p>
+                            <label for="pergunta7">Altura (0m ~ 2500m):</label>
+                            <input type="range" id="pergunta7" name="alturaLA:" min="0" max="2500">
+                        </p>
+
                     </fieldset>
                 </fieldset>
                 <br>
-                <input type="submit" value="Submeter Formulário">
+                <legend>Submit!</legend>
+                <input type="image" src="images/img_submit.gif" alt="Submit" width="48" height="48">
             </fieldset>
         </form>
     </section>
