@@ -13,12 +13,12 @@
 
 <header>
 
-    <a href="index.html"> ➥Introdução / </a>
-    <a href="local.html"> ➥Localização / </a>
-    <a href="multimedia.html"> ➥Multimédia / </a>
-    <a href="info.html"> ➥Informações / </a>
-    <a href="../index.html"> ➥Home (indice geral dos laboratórios) </a>
-    <b><a href="quizz.html"> ➥Quizz</a></b>
+    <a href="index.html" target="obj"> ➥Introdução / </a>
+    <a href="local.html" target="obj"> ➥Localização / </a>
+    <a href="multimedia.html" target="obj"> ➥Multimédia / </a>
+    <a href="info.html" target="obj"> ➥Informações / </a>
+    <a href="../index.html" target="obj"> ➥Home (indice geral dos laboratórios) </a>
+    <b><a href="quizz.html" target="obj"> ➥Quizz</a></b>
 
     <h3>QUIZZ Time!</h3>
 
@@ -29,69 +29,69 @@
 <main>
     <section>
         <form method="POST" action="mailto: a22006526@alunos.ulht.pt" enctype="multipart/form-data">
-            <fieldset>
+            <fieldset class="important, pintaCaixas4" >
                 <legend> Quizz sobre Los Angeles</legend>
 
-                <fieldset>
+                <fieldset class="pintaCaixas3">
                     <legend> Info pessoal</legend>
 
                     <p>
-                        <label for="nome">Nome:</label><br>
-                        <input type="text" id="nome" name="fname" autocomplete="on" minlength="1"><br>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="fname" autocomplete="on" minlength="1">
                     </p>
 
                     <p>
-                        <label for="apelido">Apelido:</label><br>
-                        <input type="text" id="apelido" name="fname" autocomplete="on" min="1"><br>
+                        <label for="apelido">Apelido:</label>
+                        <input type="text" id="apelido" name="fname" autocomplete="on" min="1">
                     </p>
 
                     <p>
-                        <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="fname" autocomplete="on" minlength="5"><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="fname" autocomplete="on" minlength="5">
                     </p>
 
                     <p>
-                        <label for="imagem">Fotografia:</label><br>
-                        <input type="file" id="imagem" name="fname"><br>
+                        <label for="imagem">Fotografia:</label>
+                        <input type="file" id="imagem" name="fname">
                     </p>
 
 
-                    <fieldset>
+                    <fieldset class="pintaCaixas1">
                         <legend> Quizz</legend>
 
                         <p>
-                            <label for="pergunta1">1) Insira a sigla de Los Angeles:</label><br>
-                            <input type="text" id="pergunta1" name="Sigla" size="10" maxlength="2"><br>
+                            <label for="pergunta1">1) Insira a sigla de Los Angeles:</label>
+                            <input type="text" id="pergunta1" name="Sigla" size="10" maxlength="2">
                         </p>
 
                         <legend> 2) Qual a população de Los Angeles:</legend>
                         <p>
                             <input type="radio" id="pergunta2.1" name="pergunta2" value="pop:">
-                            <label for="pergunta2.1"> 3,898,747 </label><br>
+                            <label for="pergunta2.1"> 3,898,747 </label>
 
                             <input type="radio" id="pergunta2.2" name="pergunta2" value="pop:">
-                            <label for="pergunta2.2"> 2,421,543 </label><br>
+                            <label for="pergunta2.2"> 2,421,543 </label>
 
                             <input type="radio" id="pergunta2.3" name="pergunta2" value="pop:">
-                            <label for="pergunta2.3"> 4,312,432 </label><br>
+                            <label for="pergunta2.3"> 4,312,432 </label>
                         </p>
 
                         <legend> 3) Área total (dimensão km²):</legend>
                         <p>
                             <input type="checkbox" id="pergunta3.1" name="pergunta3" value="KMTotal:">
-                            <label for="pergunta3.1"> + de 1 200 km² </label><br>
+                            <label for="pergunta3.1"> + de 1 200 km² </label>
 
                             <input type="checkbox" id="pergunta3.2" name="pergunta3" value="KMTotal:">
-                            <label for="pergunta3.2"> - 1000 km² </label><br>
+                            <label for="pergunta3.2"> - 1000 km² </label>
 
                             <input type="checkbox" id="pergunta3.3" name="pergunta3" value="KMTotal:">
-                            <label for="pergunta3.3"> Entre 1000 a 1200 km² </label><br>
+                            <label for="pergunta3.3"> Entre 1000 a 1200 km² </label>
                         </p>
 
                         <legend> 4) Indique a data em que Los Angeles foi "fundada"</legend>
                         <p>
                             <label for="pergunta4">Data ➥</label>
-                            <input type="date" id="pergunta4" name="pergunta4" min="1800-01-01"><br>
+                            <input type="date" id="pergunta4" name="pergunta4" min="1800-01-01">
                         </p>
 
                         <p>
@@ -134,7 +134,8 @@
                             </select>
                         </p>
 
-                        Insira a sua opinião:<br>
+                        Insira a sua opinião:
+                        <br>
                         <textarea name="Opinião" rows="10" cols="70"> Insira aqui a sua opinião. </textarea>
 
                     </fieldset>
