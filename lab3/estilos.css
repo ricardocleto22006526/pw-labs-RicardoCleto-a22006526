@@ -1,0 +1,37 @@
+*{ /* Universal */
+    font-family: sans-serif;
+}
+
+h3{ /* Tipo */
+    color: GoldenRod;
+}
+
+h2{ /* Tipo */
+    color: Green;
+}
+
+h1{ /* Tipo */
+    color: Red;
+}
+
+.important{ /* Classe */
+    font-weight: bold;
+}
+
+#unico{ /* id */
+    background-color: aqua;
+}
+
+a[target=_blank]{ /* atributo */
+    background-color: yellow;
+}
+
+div:hover{ /* Pseudo-Classe */
+    background-color: violet;
+}
+
+p::first-letter{ /* Pseudo-Elemento */
+    font-size: 2em;
+}
+
+
