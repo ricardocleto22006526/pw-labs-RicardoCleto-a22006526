@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Quizz</title>
 </head>
-<body>
+<body style="background-color:lightblue">
 
 
 <header>
@@ -33,25 +33,31 @@
 
                     <p>
                         <label for="nome">Nome:</label><br>
-                        <input type="text" id="nome" name="fname"><br>
+                        <input type="text" id="nome" name="fname" autocomplete="on" minlength="1"><br>
                     </p>
 
                     <p>
                         <label for="apelido">Apelido:</label><br>
-                        <input type="text" id="apelido" name="fname"><br>
+                        <input type="text" id="apelido" name="fname" autocomplete="on" min="1"><br>
                     </p>
 
                     <p>
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="fname"><br>
+                        <input type="email" id="email" name="fname" autocomplete="on" minlength="5"><br>
                     </p>
+
+                    <p>
+                        <label for="imagem">Fotografia:</label><br>
+                        <input type="file" id="imagem" name="fname"><br>
+                    </p>
+
 
                     <fieldset>
                         <legend> Quizz</legend>
 
                         <p>
                             <label for="pergunta1">1) Insira a sigla de Los Angeles:</label><br>
-                            <input type="text" id="pergunta1" name="Sigla"><br>
+                            <input type="text" id="pergunta1" name="Sigla" size="10" maxlength="2"><br>
                         </p>
 
                         <legend> 2) Qual a população de Los Angeles:</legend>
@@ -100,6 +106,32 @@
                             <label for="pergunta7">Altura (0m ~ 2500m):</label>
                             <input type="range" id="pergunta7" name="alturaLA:" min="0" max="2500">
                         </p>
+
+                        <legend> 8) Qual o ponto mais elevado de Los Angeles?</legend>
+                        <p>
+                            <label for="pergunta8">Los Angeles pertence a que estado?</label>
+                            <input list="pergunta8" name="pergunta8">
+                            <datalist id="pergunta8">
+                                <option value="California">
+                                <option value="Hawaii">
+                                <option value="Alabama">
+                                <option value="Ohio">
+                                <option value="Illinois">
+                            </datalist>
+
+                        </p>
+
+                        <legend> 9) Gostavas de conhecer Los Angeles?</legend>
+                        <p>
+                            <label for="pergunta9">Resposta:</label>
+                            <select id="pergunta9" name="pergunta9">
+                                <option value="Sim">Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
+                        </p>
+
+                        Insira a sua opinião:<br>
+                        <textarea name="Opinião" rows="10" cols="70"> Insira aqui a sua opinião. </textarea>
 
                     </fieldset>
                 </fieldset>
