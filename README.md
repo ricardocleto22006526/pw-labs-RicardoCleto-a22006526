@@ -16,6 +16,7 @@ Link do Heroku sobre o Lab1: https://a22006526-pw-lab1.herokuapp.com/
 Link enunciado Lab2: https://github.com/ULHT-PW/pw-lab2
 
 Lab2 => Tem todos os updates seguintes ao LAB1
+
 Link do Heroku sobre o Lab2: https://a22006526-pw-lab2.herokuapp.com/
 
 ----------------------------------------------------------------------------
