@@ -25,12 +25,7 @@ h3:after{ /* Tipo */
 }
 
 h2:before{ /* Tipo */
-    color: GoldenRod;
-    content: "😎";
-}
-
-h2{ /* Tipo */
-    color: Green;
+    color: green;
     content: "😎";
 }
 
@@ -39,10 +34,6 @@ h2:after{ /* Tipo */
 }
 
 h1:before{ /* Tipo */
-    content: "😎";
-}
-
-h1{ /* Tipo */
     color: Red;
     content: "😎";
 }
@@ -50,7 +41,6 @@ h1{ /* Tipo */
 h1:after{ /* Tipo */
     content: "👽";
 }
-
 
 .important{ /* Classe */
     font-weight: bold;
