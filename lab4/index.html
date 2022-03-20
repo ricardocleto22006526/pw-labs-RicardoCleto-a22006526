@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -13,10 +14,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-        box-sizing: border-box;
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 
+    <style>
+
+        * {
+            box-sizing: border-box;
         }
 
         .capitais {
@@ -26,7 +30,6 @@
             flex-flow: row wrap;
             justify-content: space-around;
             align-items: center ;
-
         }
 
         .capitais > div {
@@ -52,35 +55,91 @@
             justify-content: center;
             align-items: center;
         }
+
+        .titulo-capitais{
+            font-family: Anton, sans-serif;
+        }
+
+        .menu div{
+            display: flex;
+        }
+
+        .menu a:last-child{
+            margin-left:auto;
+        }
+
+        a{
+            padding: 20px;
+            text-decoration: none;
+            color: Black;
+
+            background-color: SpringGreen;
+            margin: 2px;
+            text-decoration: none;
+            color: black;
+            box-shadow: 2px 3px 3px MediumSpringGreen;
+            border-radius: 10px;
+        }
+
+        a:hover{
+            background-color: PaleGreen;
+            font-weight: bold;
+        }
+
+        .nav-menu{
+            display: flex;
+        }
+
+        .flex-container {
+            height: 200px;
+            background-image: url("images/PortugalUcrania.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
     </style>
-
-
 </head>
 
 <header>
 
+    <div class="menu">
+
+        <nav class="nav-menu">
+            <a href="#C1"> Cidades Europeias </a>
+            <a href="#C2"> Dicas Para Viajar</a>
+            <a href="#C3"> Destinos de Sonho </a>
+            <a href="../index.html"> Link Laboratorios </a>
+        </nav>
+    </div>
+
+    <br>
+
+    <div class="flex-container"> </div>
+
+    <div class="">
+
+    </div>
 
 </header>
 
 
 <body>
 
-
-<h1>
-    Capitais Europeias
-
-</h1>
+<h1 id="C1"> Capitais Europeias </h1>
 
 
 <div class="capitais">
+
     <div>
 
         <div><img src="images\bruxelas.avif" alt=""></div>
+
         <div>
-            <p>Bruxelas</p>
-
+            <p class="titulo-capitais"> Bruxelas</p>
         </div>
-
 
     </div>
 
@@ -88,11 +147,10 @@
     <div>
 
         <div><img src="images\lisboa.avif" alt=""></div>
+
         <div>
-            <p>Lisboa</p>
-
+            <p class="titulo-capitais">Lisboa</p>
         </div>
-
 
     </div>
 
@@ -100,11 +158,10 @@
     <div>
 
         <div><img src="images\paris.avif" alt=""></div>
+
         <div>
-            <p>Paris</p>
-
+            <p class="titulo-capitais">Paris</p>
         </div>
-
 
     </div>
 
@@ -113,21 +170,18 @@
 
         <div><img src="images\budapeste.avif" alt=""></div>
         <div>
-            <p>Budapeste</p>
-
+            <p class="titulo-capitais">Budapeste</p>
         </div>
-
 
     </div>
 
     <div>
 
         <div><img src="images\londres.avif" alt=""></div>
+
         <div>
-            <p>Londres</p>
-
+            <p class="titulo-capitais">Londres</p>
         </div>
-
 
     </div>
 
@@ -135,21 +189,18 @@
 
         <div><img src="images\roma.avif" alt=""></div>
         <div>
-            <p>Roma</p>
-
+            <p class="titulo-capitais">Roma</p>
         </div>
-
 
     </div>
 
     <div>
 
         <div><img src="images\varsovia.avif" alt=""></div>
+
         <div>
-            <p>Varsovia</p>
-
+            <p class="titulo-capitais">Varsovia</p>
         </div>
-
 
     </div>
 
@@ -157,11 +208,10 @@
     <div>
 
         <div><img src="images\viena.avif" alt=""></div>
+
         <div>
-            <p>Viena</p>
-
+            <p class="titulo-capitais">Viena</p>
         </div>
-
 
     </div>
 
@@ -169,28 +219,23 @@
     <div>
 
         <div><img src="images\milao.avif" alt=""></div>
+
         <div>
-            <p>Milão</p>
-
+            <p class="titulo-capitais">Milão</p>
         </div>
-
 
     </div>
 
     <div>
 
         <div><img src="images\reykiavik.avif" alt=""></div>
+
         <div>
-            <p>Reykiavik</p>
-
+            <p class="titulo-capitais">Reykiavik</p>
         </div>
-
 
     </div>
 
-
 </div>
-
-
 </body>
 </html>
