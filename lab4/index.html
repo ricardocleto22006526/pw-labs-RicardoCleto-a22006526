@@ -120,19 +120,6 @@
             margin: 7px;
         }
 
-
-
-        .destinos-sonho{
-        background-color: SpringGreen;
-            display: grid;
-            grid-template-areas:
-                                "lisboa porto castelo-branco Viagem "
-                                "sesimbra sesimbra guimaraes Viagem ";
-            padding: 10px;
-            gap: 5px;
-            justify-content: space-between;
-        }
-
         item1 {
           grid-area: lisboa;
         }
@@ -158,7 +145,10 @@
         }
 
         @media (max-width:900px) {
+
             .destinos-sonho{
+                width: 100%;
+
                 background-color: SpringGreen;
                 display: grid;
                 grid-template-areas:
@@ -170,9 +160,16 @@
                 gap: 5px;
                 justify-content: space-between;
             }
+
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
 
         @media (min-width:901px){
+
             .destinos-sonho{
                 background-color: SpringGreen;
                 display: grid;
@@ -183,6 +180,12 @@
                 gap: 5px;
                 justify-content: space-between;
             }
+
+            img{
+                width: 100%;
+                height: 100%
+            }
+
         }
 
     </style>
@@ -412,27 +415,27 @@
 <div class="destinos-sonho">
 
     <div class="item1">
-        <img src="images/destinosViagem/lisboa.jpg" alt="error" width="300" height="300">
+        <img src="images/destinosViagem/lisboa.jpg" alt="error">
     </div>
 
     <div class="item2">
-        <img src="images/destinosViagem/porto.jpg" alt="error" width="300" height="300">
+        <img src="images/destinosViagem/porto.jpg" alt="error">
     </div>
 
     <div class="item3">
-        <img src="images/destinosViagem/castelo-branco.jpg" alt="error"  width="300" height="300">
+        <img src="images/destinosViagem/castelo-branco.jpg" alt="error">
     </div>
 
     <div class="item4">
-        <img src="images/destinosViagem/gm.jpg" alt="error" width="300" height="300">
+        <img src="images/destinosViagem/gm.jpg" alt="error">
     </div>
 
     <div class="item5">
-        <img src="images/destinosViagem/sesimbra.jpg" alt="error"  width="705" height="300">
+        <img src="images/destinosViagem/sesimbra.jpg" alt="error">
     </div>
 
     <div class="item6">
-        <img src="images/destinosViagem/Viagem.jpg" alt="error"  width="400" height="400">
+        <img src="images/destinosViagem/Viagem.jpg" alt="error">
     </div>
 
 
