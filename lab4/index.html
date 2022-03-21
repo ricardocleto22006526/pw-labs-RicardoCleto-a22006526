@@ -104,21 +104,7 @@
             font-weight: bold;
         }
 
-        .dicas{
-            display: grid;
-            grid-template: "a a a a"
-                           "b b b b";
-        }
 
-        .dicas div{
-            width: 350px;
-            height: 500px;
-            box-shadow: 2px 3px 3px MediumSpringGreen;
-            border-radius: 10px;
-            background-color: LightGray;
-            padding: 20px;
-            margin: 7px;
-        }
 
         item1 {
           grid-area: lisboa;
@@ -148,7 +134,6 @@
 
             .destinos-sonho{
                 width: 100%;
-
                 background-color: SpringGreen;
                 display: grid;
                 grid-template-areas:
@@ -161,10 +146,31 @@
                 justify-content: space-between;
             }
 
-
             img{
                 width: 100%;
                 height: 100%;
+            }
+
+            .dicas{
+                display: grid;
+                grid-template: "a"
+                               "a"
+                               "a"
+                               "a"
+                               "b"
+                               "b"
+                               "b"
+                               "b";
+            }
+
+            .dicas div{
+                width: 97%;
+                height: 500px;
+                box-shadow: 2px 3px 3px MediumSpringGreen;
+                border-radius: 10px;
+                background-color: LightGray;
+                padding: 20px;
+                margin: 7px;
             }
         }
 
@@ -186,6 +192,21 @@
                 height: 100%
             }
 
+            .dicas{
+                display: grid;
+                grid-template: "a a a a"
+                           "b b b b";
+            }
+
+            .dicas div{
+                width: 350px;
+                height: 500px;
+                box-shadow: 2px 3px 3px MediumSpringGreen;
+                border-radius: 10px;
+                background-color: LightGray;
+                padding: 20px;
+                margin: 7px;
+            }
         }
 
     </style>
