@@ -1,30 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
     <meta charset="UTF-8">
+
     <title>PW Labs</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: Fjalla One, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (min-width:901px){
+
+            .showcase header{
+                position: absolute;
+                top: 0;
+                right: 50px;
+                width: 100%;
+                padding: 40px 100px;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+
+            .showcase{
+                position: absolute;
+                right: 0px;
+                width: 100%;
+                min-height: 100vh;
+                padding: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: black;
+                color: Crimson;
+                z-index: 2;
+            }
+
+            .showcase video{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.8;
+            }
+
+            .text{
+                position: relative;
+                z-index: 10;
+                right: 15px;
+                bottom: 125px;
+            }
+
+            h1{
+                font-size: 4em;
+                font-weight: bold;
+                color: Navy;
+            }
+
+            h2{
+                font-size: 2em;
+                color: RoyalBlue;
+            }
+
+            li{
+                font-size: 150%;
+                color: MediumOrchid;
+            }
+        }
+
+
+        @media (max-width:900px) {
+
+            .showcase header{
+                position: absolute;
+                top: 0;
+                right: 50px;
+                width: 100%;
+                padding: 40px 100px;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .showcase{
+                position: absolute;
+                right: 0px;
+                width: 100%;
+                min-height: 100vh;
+                padding: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: black;
+                color: Crimson;
+                z-index: 2;
+            }
+
+            .showcase video{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.8;
+            }
+
+            .text{
+                position: relative;
+                z-index: 10;
+                right: 15px;
+                top: 15px;
+            }
+
+            h1{
+                font-size: 4em;
+                font-weight: bold;
+                color: Navy;
+            }
+
+            h2{
+                font-size: 2em;
+                color: RoyalBlue;
+            }
+
+            li{
+                font-size: 125%;
+                color: MediumOrchid;
+            }
+        }
+
+    </style>
+
 </head>
 <body>
-<h1> Programação Web: Laboratórios </h1>
+
+<section class="showcase">
+
+    <header>
+        <h1> Programação Web </h1>
+    </header>
+
+    <video src="VideoIndex/islandVideo.mp4" muted loop autoplay></video>
+
+    <div class="overlay">
+
+        <div class="text">
+
+            <h2> Laboratórios:</h2>
+
+            <ul>
+                <li>
+                    <a href="lab1/index.html"> Laboratório 1: Conhecer a Internet com a minha primeira página Web </a>
+                </li>
+
+                <li>
+                    <a href="lab2/index.html"> Laboratório 2: Explorando o HTML com o meu primeiro website </a>
+                </li>
+
+                <li>
+                    <a href="lab3/index.html"> Laboratório 3: Website com Quizz 🔘 e CSS 🖌 </a>
+                </li>
+
+                <li>
+                    <a href="lab4/index.html"> Laboratório 4: SPA com layout responsivo baseado em Flexbox e Grid </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
 <h3> ➥Ricardo Cleto (a22006526) - Aluno de Licenciatura em Engenharia Informática (LEI) </h3>
 
-<ul>
-    <li>
-        <a href="lab1/index.html"> Laboratório 1: Conhecer a Internet com a minha primeira página Web </a>
-    </li>
 
-    <li>
-        <a href="lab2/index.html"> Laboratório 2: Explorando o HTML com o meu primeiro website </a>
-    </li>
-
-    <li>
-        <a href="lab3/index.html"> Laboratório 3: Website com Quizz 🔘 e CSS 🖌 </a>
-    </li>
-
-    <li>
-        <a href="lab4/index.html"> Lab 4: SPA com layout responsivo baseado em Flexbox e Grid </a>
-    </li>
-</ul>
 
 
 </body>
