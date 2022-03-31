@@ -26,7 +26,7 @@
 
         .capitais {
             display: flex;
-            background-color: SpringGreen;
+
             padding: 50px;
             flex-flow: row wrap;
             justify-content: space-around;
@@ -60,6 +60,17 @@
         .titulo-capitais{
             font-family: Anton, sans-serif;
         }
+
+        .parallax {
+            background-image: url("images/imgParallax.jpg");
+            min-height: 500px;
+            background-attachment: fixed;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
 
         .menu div{
             display: flex;
@@ -358,8 +369,86 @@
                 background-color: PaleGreen;
                 font-weight: bold;
             }
+        }
+
+        .animation-grid{
+            position:relative;
+            background-color:SpringGreen;
+            display:grid;
+            height: 500px;
+
+            grid-template-columns:2fr 2fr;
+            grid-template-rows:4fr 4fr;
+            border-radius: 50px;
+
+            grid-template-areas:
+                               "anim1 .  anim2"
+                               "anim3 .  anim4";
+        }
+
+        @keyframes animation1{
+            0% {background-color:Black; left:-150px; bottom:75px;}
+            50% {background-color:DarkGray; left:100px; bottom:50px; border-radius:50px;}
+            100% {background-color:Black; left:100px; bottom:50px;}
+        }
+
+        @keyframes animation2{
+            0% {background-color:yellow; right:50px; top:25px; border-radius:20px 20px 20px 20px;}
+            33% {background-color:orange; right:100px; top:60px; border-radius:20px 20px 20px 20px;}
+            66% {background-color:orangeRed; right:100px; top:60px;border-radius:20px 20px 20px 20px;}
+            100% {background-color:red;  right:50px; top:25px; border-radius:20px 20px 20px 20px;}
+        }
+
+        @keyframes animation3 {
+            0% {transform: rotate(0deg); background-color:red; right:50px; top:25px;}
+            50% {transform: rotate(360deg);background-color:yellow; border-radius: 50px 50px 50px 50px; right:100px; top:60px;}
+            100% {transform: rotate(0deg); background-color:red; right:50px; top:25px;}
+        }
+
+        @keyframes animation4 {
+          0% {transform: rotate(0deg); width: 200px;   border-radius:20px 20px 20px 20px; right:50px; top:25px;}
+          50% {transform: rotate(180deg);  width: 100px;  border-radius:10px 10px 10px 10px; right:500px; top:60px;}
+          100% {transform: rotate(360deg);  width: 200px;  border-radius:20px 20px 20px 20px; right:50px; top:25px;}
+        }
+
+        .animation-grid > div:nth-child(1){
+            position:absolute;
+            grid-area:anim1;
+            width: 150px; height: 150px;
+            animation-name: animation1;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        .animation-grid > div:nth-child(2){
+            position:absolute;
+            grid-area:anim2;
+            width: 150px; height: 150px;
+            animation-name: animation2;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
 
         }
+        .animation-grid > div:nth-child(3){
+            position:absolute;
+            grid-area:anim3;
+            background-color:white;
+            width: 150px; height: 150px;
+            animation-name: animation3;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+        }
+        .animation-grid > div:nth-child(4){
+            position:absolute;
+            grid-area:anim4;
+            background-color:white;
+            width: 150px; height: 150px;
+            animation-name: animation4;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
 
     </style>
 </head>
@@ -372,6 +461,7 @@
             <a href="#C1"> Cidades Europeias </a>
             <a href="#C2"> Dicas Para Viajar</a>
             <a href="#C3"> Destinos de Sonho </a>
+            <a href="#C4"> Animações </a>
             <a href="../index.html"> Link Laboratorios </a>
         </nav>
     </div>
@@ -392,110 +482,111 @@
 <br>
 
 <h1 id="C1"> Capitais Europeias </h1>
-
-<div class="capitais">
-
-    <div>
-
-        <div><img src="images\bruxelas.avif" alt=""></div>
+<div class="parallax">
+    <div class="capitais">
 
         <div>
-            <p class="titulo-capitais"> Bruxelas</p>
+
+            <div><img src="images\bruxelas.avif" alt=""></div>
+
+            <div>
+                <p class="titulo-capitais"> Bruxelas</p>
+            </div>
+
         </div>
 
-    </div>
-
-
-    <div>
-
-        <div><img src="images\lisboa.avif" alt=""></div>
 
         <div>
-            <p class="titulo-capitais">Lisboa</p>
+
+            <div><img src="images\lisboa.avif" alt=""></div>
+
+            <div>
+                <p class="titulo-capitais">Lisboa</p>
+            </div>
+
         </div>
 
-    </div>
-
-
-    <div>
-
-        <div><img src="images\paris.avif" alt=""></div>
 
         <div>
-            <p class="titulo-capitais">Paris</p>
+
+            <div><img src="images\paris.avif" alt=""></div>
+
+            <div>
+                <p class="titulo-capitais">Paris</p>
+            </div>
+
         </div>
 
-    </div>
-
-
-    <div>
-
-        <div><img src="images\budapeste.avif" alt=""></div>
-        <div>
-            <p class="titulo-capitais">Budapeste</p>
-        </div>
-
-    </div>
-
-    <div>
-
-        <div><img src="images\londres.avif" alt=""></div>
 
         <div>
-            <p class="titulo-capitais">Londres</p>
+
+            <div><img src="images\budapeste.avif" alt=""></div>
+            <div>
+                <p class="titulo-capitais">Budapeste</p>
+            </div>
+
         </div>
-
-    </div>
-
-    <div>
-
-        <div><img src="images\roma.avif" alt=""></div>
-        <div>
-            <p class="titulo-capitais">Roma</p>
-        </div>
-
-    </div>
-
-    <div>
-
-        <div><img src="images\varsovia.avif" alt=""></div>
 
         <div>
-            <p class="titulo-capitais">Varsovia</p>
+
+            <div><img src="images\londres.avif" alt=""></div>
+
+            <div>
+                <p class="titulo-capitais">Londres</p>
+            </div>
+
         </div>
-
-    </div>
-
-
-    <div>
-
-        <div><img src="images\viena.avif" alt=""></div>
 
         <div>
-            <p class="titulo-capitais">Viena</p>
+
+            <div><img src="images\roma.avif" alt=""></div>
+            <div>
+                <p class="titulo-capitais">Roma</p>
+            </div>
+
         </div>
-
-    </div>
-
-
-    <div>
-
-        <div><img src="images\milao.avif" alt=""></div>
 
         <div>
-            <p class="titulo-capitais">Milão</p>
+
+            <div><img src="images\varsovia.avif" alt=""></div>
+
+            <div>
+                <p class="titulo-capitais">Varsovia</p>
+            </div>
+
         </div>
 
-    </div>
-
-    <div>
-
-        <div><img src="images\reykiavik.avif" alt=""></div>
 
         <div>
-            <p class="titulo-capitais">Reykiavik</p>
+
+            <div><img src="images\viena.avif" alt=""></div>
+
+            <div>
+                <p class="titulo-capitais">Viena</p>
+            </div>
+
         </div>
 
+
+        <div>
+
+            <div><img src="images\milao.avif" alt=""></div>
+
+            <div>
+                <p class="titulo-capitais">Milão</p>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div><img src="images\reykiavik.avif" alt=""></div>
+
+            <div>
+                <p class="titulo-capitais">Reykiavik</p>
+            </div>
+
+        </div>
     </div>
 </div>
 
@@ -685,6 +776,16 @@
         <div class="text"> <button class="button" > Ver Ofertas </button> </div>
     </div>
 
+</div>
+
+
+<h1 id="C4"> Animação </h1>
+<div class="animation-grid">
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
 </div>
 
 </body>
