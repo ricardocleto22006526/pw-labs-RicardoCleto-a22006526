@@ -400,15 +400,15 @@
         }
 
         @keyframes animation3 {
-            0% {transform: rotate(0deg); background-color:red; right:50px; top:25px;}
-            50% {transform: rotate(360deg);background-color:yellow; border-radius: 50px 50px 50px 50px; right:100px; top:60px;}
-            100% {transform: rotate(0deg); background-color:red; right:50px; top:25px;}
+            0% {transform: rotate(0deg); background-color:DarkBlue; right:50px; top:25px;}
+            50% {transform: rotate(360deg);background-color:Blue; border-radius: 50px 50px 50px 50px; right:100px; top:60px;}
+            100% {transform: rotate(0deg); background-color:DarkBlue; right:50px; top:25px;}
         }
 
         @keyframes animation4 {
-          0% {transform: rotate(0deg); width: 200px;   border-radius:20px 20px 20px 20px; right:50px; top:25px;}
-          50% {transform: rotate(180deg);  width: 100px;  border-radius:10px 10px 10px 10px; right:500px; top:60px;}
-          100% {transform: rotate(360deg);  width: 200px;  border-radius:20px 20px 20px 20px; right:50px; top:25px;}
+          0% {transform: rotate(0deg); width: 200px;  background-color:pink; border-radius:20px 20px 20px 20px; right:50px; top:25px;}
+          50% {transform: rotate(180deg);  width: 100px; background-color:purple; border-radius:10px 10px 10px 10px; right:500px; top:60px;}
+          100% {transform: rotate(360deg);  width: 200px; background-color:pink; border-radius:20px 20px 20px 20px; right:50px; top:25px;}
         }
 
         .animation-grid > div:nth-child(1){
@@ -422,7 +422,7 @@
 
         .animation-grid > div:nth-child(2){
             position:absolute;
-            grid-area:anim2;
+
             width: 150px; height: 150px;
             animation-name: animation2;
             animation-duration: 5s;
@@ -450,6 +450,176 @@
         }
 
 
+        @media(max-width:900px){
+            .grid-fotos{
+                background-color: SpringGreen;
+                display: grid;
+                grid-template-areas:
+                                   "ft1 ft2"
+                                   "ft3 ft4"
+                                   "ft5 ft6"
+                                   "ft7 ft8"
+                                   "ft9 ft10"
+                                   "ft11 ft12";
+                padding: 10px;
+                gap:5px;
+                border-radius: 50px;
+                margin: 0 10vw;
+                justify-content: space-between;
+            }
+        }
+
+        @media(max-width:600px){
+            .grid-fotos{
+
+                background-color: SpringGreen;
+                display: grid;
+                grid-template-areas:
+                                    "ft1"
+                                    "ft2"
+                                    "ft3"
+                                    "ft4"
+                                    "ft5"
+                                    "ft6"
+                                     "ft7"
+                                    "ft8"
+                                    "ft9"
+                                    "ft10"
+                                    "ft11"
+
+                padding: 10px;
+                gap:5px;
+                border-radius: 50px;
+                margin: 0 10vw;
+                justify-content: space-between;
+            }
+        }
+
+        @media(min-width:901px){
+            .grid-fotos{
+                background-color: SpringGreen;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas:
+                                   "ft1 ft2 ft3"
+                                   "ft4 ft5 ft6"
+                                   "ft7 ft8 ft9"
+                                  "ft10 ft11 ft12";
+                gap:5px;
+                border-radius: 50px;
+                padding:20px;
+                margin: 0 10vw;
+                justify-content: space-between;
+            }
+        }
+
+        .grid-fotos > div:hover{
+            background-color: black;
+        }
+
+        .grid-fotos > div:hover p{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .grid-fotos > div:hover img{
+            opacity: 0.5;
+        }
+
+        .grid-fotos > div{
+            position:relative;
+            height:250px;
+            width:250px;
+        }
+
+        .grid-fotos p{
+            position: absolute;
+            visibility: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            display:wrap;
+            background-color:white;
+            border-radius:10px;
+            bottom:10px;
+        }
+
+        .foto-grid1{
+            grid-area:ft1;
+        }
+
+        .foto-grid1:hover{
+            transform: rotate(-5deg);
+        }
+
+        .foto-grid2{
+            grid-area:ft2;
+        }
+        .ft2:hover{
+            transform: rotate(5deg);
+        }
+
+        .foto-grid3{
+            grid-area:ft3;
+        }
+        .foto-grid3:hover{
+            transform:translate(-50px,50px);
+         }
+
+        .foto-grid4{
+            grid-area:ft4;
+        }
+
+        .foto-grid:hover {
+            transform:skew(20deg,10deg);
+        }
+
+        .foto-grid5{
+            grid-area:ft5;
+        }
+        .foto-grid5:hover{
+            transform:scale(2,2);
+        }
+
+        .foto-grid6{
+            grid-area:ft6;
+        }
+
+        .foto-grid7{
+            grid-area:ft7;
+        }
+
+        .foto-grid8{
+            grid-area:ft8;
+        }
+
+        .foto-grid9{
+            grid-area:ft9;
+        }
+
+        .foto-grid10{
+            grid-area:ft10;
+        }
+
+        .foto-grid11{
+            grid-area:ft11;
+        }
+
+        .foto-grid12{
+            grid-area:ft12;
+        }
+
+        .grid-fotos img{
+            width:250px;
+            height:250px;
+            transition: opacity 1s;
+            transition: rotate 1s;
+            background-color:black;
+        }
+
+        .grid-fotos > div p{
+            opacity:0;
+        }
     </style>
 </head>
 
@@ -461,7 +631,8 @@
             <a href="#C1"> Cidades Europeias </a>
             <a href="#C2"> Dicas Para Viajar</a>
             <a href="#C3"> Destinos de Sonho </a>
-            <a href="#C4"> Animações </a>
+            <a href="#C4"> Grelha de Fotografias </a>
+            <a href="#C5"> Animações </a>
             <a href="../index.html"> Link Laboratorios </a>
         </nav>
     </div>
@@ -481,7 +652,7 @@
 
 <br>
 
-<h1 id="C1"> Capitais Europeias </h1>
+<center> <h1 id="C1"> Capitais Europeias </h1> </center>
 <div class="parallax">
     <div class="capitais">
 
@@ -593,7 +764,7 @@
 <br><br>
 
 
-<h1 id="C2"> Dicas Para Vianjantes </h1>
+<center> <h1 id="C2"> Dicas Para Vianjantes </h1> </center>
 <div class="dicas">
 
     <div>
@@ -696,8 +867,7 @@
 <br><br>
 
 
-<h1 id="C3">Destinos de Sonho</h1>
-
+<center> <h1 id="C3">Destinos de Sonho</h1> </center>
 <div class="destinos-sonho">
 
     <div class="item1">
@@ -778,8 +948,77 @@
 
 </div>
 
+<br><br>
 
-<h1 id="C4"> Animação </h1>
+<center> <h1 id="C4">Grelha de Fotografias</h1> </center>
+<div class="grid-fotos">
+
+        <div class="foto-grid1">
+            <img src="images/foto-grid/alessandro-cavestro.jpg">
+            <p>Alessandro Cavestro</p>
+        </div>
+
+        <div class="foto-grid2">
+            <img src="images/foto-grid/ivan-yerokhin.jpg">
+            <p>Ivan Yerokhin</p>
+        </div>
+
+        <div class="foto-grid3">
+            <img src="images/foto-grid/ingrid-martinussen.jpg">
+            <p>Ingrid Martinussen</p>
+        </div>
+
+        <div class="foto-grid4">
+            <img src="images/foto-grid/taiki-ishikawa.jpg">
+            <p>Taiki Ishikawa</p>
+        </div>
+
+        <div class="foto-grid5">
+            <img src="images/foto-grid/andres-molina.jpg">
+            <p>Andres Molina</p>
+        </div>
+
+
+       <div class="foto-grid6">
+            <img src="images/foto-grid/terry-cohen.jpg">
+            <p>Terry Cohen</p>
+       </div>
+
+        <div class="foto-grid7">
+            <img src="images/foto-grid/ingrid-martinussen2.jpg">
+            <p>Ingrid Martinussen</p>
+        </div>
+
+        <div class="foto-grid8">
+            <img src="images/foto-grid/kellen-riggin.jpg">
+            <p>Kellen Riggin</p>
+        </div>
+
+        <div class="foto-grid9">
+            <img src="images/foto-grid/louis-gaudiau.jpg">
+            <p>Louis Gaudiau</p>
+        </div>
+
+        <div class="foto-grid10">
+            <img src="images/foto-grid/susan-wilkinson.jpg">
+            <p>Susan Wilkinson</p>
+        </div>
+
+        <div class="foto-grid11">
+            <img src="images/foto-grid/logan-weaver.jpg">
+            <p>Logan Weaver</p>
+        </div>
+
+        <div class="foto-grid12">
+            <img src="images/foto-grid/philip-myrtorp.jpg">
+            <p>Philip Myrtorp</p>
+        </div>
+
+</div>
+
+<br><br>
+
+<center> <h1 id="C5"> Animação </h1> </center>
 <div class="animation-grid">
 
     <div></div>
