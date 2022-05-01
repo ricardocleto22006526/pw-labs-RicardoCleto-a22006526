@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-</head>
-<body>
 
     {% extends 'portfolio/layout.html' %}
 
+</head>
+<body>
+
+
     {% block main %}
 
-        <h3>Home</h3>
-        <p>Página home </p>
-
         {% load static %}
-        <img src="{% static 'portfolio/images/United.jpg' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
 
+    <main>
+            <div class="container">
+
+                <h3>Home</h3>
+                <p>Página home </p>
+
+                <h3>OLA!</h3>
+
+                <p>Página home 2</p>
+                {% load static %}
+                <img src="{% static 'portfolio/images/United.jpg' %}">
+
+            </div>
+        </main>
 
     {% endblock %}
 

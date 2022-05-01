@@ -1,0 +1,13 @@
+.container{
+    height: 5000px;
+}
+
+h3{
+    color: red;
+
+}
+
+main{
+    background-color: green;
+    background-size: cover;
+}
