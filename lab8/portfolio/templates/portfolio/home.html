@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+    {% extends 'portfolio/layout.html' %}
+
+    {% block main %}
+
+        <h3>Home</h3>
+        <p>Página home </p>
+
+        {% load static %}
+        <img src="{% static 'portfolio/images/United.jpg' %}">
+
+
+    {% endblock %}
+
+</body>
+</html>
