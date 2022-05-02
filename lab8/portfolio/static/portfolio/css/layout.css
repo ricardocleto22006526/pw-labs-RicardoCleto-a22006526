@@ -2,7 +2,10 @@
     padding: 0;
     margin: 0;
     font-family: 'Secular One', sans-serif;
-    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
 }
 
 .hero{
@@ -78,19 +81,13 @@ footer {
 }
 
 .footerBackground{
-    background-color: black;
+    background-color: #010400;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     margin-left: 30%;
     margin-right: 30%;
     height: 63%;
-}
-
-main{
-    height: 100%;
-    width: 100%;
-    padding: 50px;
 }
 
 .header1{
