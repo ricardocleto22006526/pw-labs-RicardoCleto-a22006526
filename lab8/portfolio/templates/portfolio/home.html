@@ -1,36 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
+{% extends 'portfolio/layout.html' %}
 
-    {% extends 'portfolio/layout.html' %}
+{% block style %}
 
-</head>
-<body>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
+
+{% endblock style %}
 
 
-    {% block main %}
+{% block main %}
 
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/home.css' %}"/>
+<div class="container">
+    <div class="backgroundTexto">
+            <h1 class="CyberSecurityTitle"> <span>CYBER</span>SECURITY </h1>
+    </div>
 
-    <main>
-            <div class="container">
 
-                <h3>Home</h3>
-                <p>Página home </p>
+</div>
 
-                <h3>OLA!</h3>
 
-                <p>Página home 2</p>
-                {% load static %}
-                <img src="{% static 'portfolio/images/United.jpg' %}">
-
-            </div>
-        </main>
-
-    {% endblock %}
-
-</body>
-</html>
+{% endblock main %}
