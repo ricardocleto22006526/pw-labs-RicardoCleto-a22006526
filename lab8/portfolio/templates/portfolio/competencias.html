@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Competencias</title>
+{% extends 'portfolio/layout.html' %}
 
-    <style>
-        p{
-            color: red;
-        }
-    </style>
+{% block style %}
 
-</head>
-<body>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/competencias.css' %}"/>
 
-    {% extends 'portfolio/layout.html' %}
+{% endblock style %}
 
-    {% block main %}
-        <br><br>
-        <h3>Competencias</h3>
-        <p>Página sobre competencias </p>
-    {% endblock %}
 
-</body>
-</html>
+{% block main %}
+
+<div class="container">
+
+
+</div>
+
+{% endblock main %}
