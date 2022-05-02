@@ -1,0 +1,30 @@
+.container{
+    display: block;
+    background-size: 100% 100%;
+    background-color: seagreen;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.divRetangulos {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(4, 100px);
+   margin-top: 125px;
+   margin-left: 20px;
+   padding: 30px;
+}
+
+.divRetangulos div{
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    box-shadow: 5px 2px 3px 7px black;
+    border-radius: 10px;
+    background-color: LightGray;
+    padding: 20px;
+    margin: 7px;
+}
+

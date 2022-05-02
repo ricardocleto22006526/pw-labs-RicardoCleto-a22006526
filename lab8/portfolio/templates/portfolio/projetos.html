@@ -1,18 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Projetos</title>
-</head>
-<body>
+{% extends 'portfolio/layout.html' %}
 
-    {% extends 'portfolio/layout.html' %}
+{% block style %}
 
-    {% block main %}
-        <br><br>
-        <h3>Projetos</h3>
-        <p>Página sobre projetos </p>
-    {% endblock %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/projetos.css' %}"/>
 
-</body>
-</html>
+{% endblock style %}
+
+
+{% block main %}
+
+<div class="container">
+    <div class="divRetangulos">
+
+        <div>
+            <h3> <u> Xadrez </u> </h3>
+
+        </div>
+
+        <div>
+            <h3> <u> Base de Dados Musical </u> </h3>
+
+        </div>
+
+        <div>
+            <h3> <u> MineSweeper </u> </h3>
+
+        </div>
+
+        <div>
+            <h3> <u> Jogo (Tipo Monopólio) </u> </h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock main %}
