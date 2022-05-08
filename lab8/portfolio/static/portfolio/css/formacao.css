@@ -62,3 +62,22 @@
 .whiteSpan{
     color: LightGray;
 }
+
+.infoExtra{
+    margin-left: 55px;
+    margin-bot: 40px;
+    margin-top: 225px;
+    color: white;
+}
+
+.infoExtraDiv{
+    height: auto;
+}
+
+.infoExtraDiv a{
+    color: aquamarine;
+}
+
+.infoExtraDiv a:hover{
+    color: white;
+}
