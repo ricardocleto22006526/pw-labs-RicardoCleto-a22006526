@@ -18,7 +18,7 @@
 }
 
 .divRetangulos div{
-    width: 300px;
+    width: 400px;
     height: 500px;
     box-shadow: 5px 2px 3px 7px black;
     border-radius: 10px;
@@ -37,12 +37,28 @@
 
 }
 
-.textoDentroDivRetangulos span{
-    text-align: left;
-    color: seagreen;
-}
-
 .textoDentroDivRetangulos .spanWhite{
     color: LightGray;
 }
 
+.textoDentroDivRetangulos ol{
+   margin-left: 50px;
+}
+
+.textoDentroDivRetangulos h4{
+   margin-left: 20px;
+}
+
+.colorizedSpanTitulo{
+    color: seagreen;
+}
+
+
+.colorizedSpanECTS{
+    color: LightSeaGreen;
+}
+
+
+.whiteSpan{
+    color: LightGray;
+}
