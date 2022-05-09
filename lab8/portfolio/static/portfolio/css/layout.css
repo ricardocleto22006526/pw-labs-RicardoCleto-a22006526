@@ -73,7 +73,7 @@ footer {
     bottom: 0;
     width: 100%;
     /* Height of the footer*/
-    height: 40px;
+    height: 15px;
     background-image: url("../images/matrix.gif");
     color: white;
     font-weight: bold;
@@ -85,9 +85,11 @@ footer {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    margin-left: 30%;
-    margin-right: 30%;
-    height: 63%;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-top: 1px;
+    height: 125%;
+    margin-top: -7px;
 }
 
 .header1{
