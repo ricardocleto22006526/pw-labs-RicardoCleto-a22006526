@@ -10,11 +10,39 @@
 {% block main %}
 
 <div class="container">
+    <div class="divRetangulos">
 
+        <a href="{% url 'portfolio:nova' %}" class="btn1" >Criar Post</a>
 
+        {% for posts in post %}
 
+            <div class="">
 
+                <p>ID: {{posts.id}}</p>
 
+                <p>Nome: {{posts.autor}}</p>
+
+                <p>Titulo: {{posts.titulo}}</p>
+
+                <p>Descrição: {{posts.descricao}}</p>
+
+                {% if posts.link %}
+                    <p>Link: <a href="{{posts.link}}">{{posts.link}}</a></p>
+                {% endif %}
+
+                <p>Data: {{posts.data}}</p>
+
+                {% if posts.image %}
+                   Imagem: <img src="{{ blog_post.image.url|default_if_none:'#' }}" class="post_img" alt=""/>
+                {% endif %}
+
+                <a href="{% url 'portfolio:edita' posts.id %}">Editar</a>
+            </div>
+
+        {% endfor %}
+
+    </div>
 </div>
+
 
 {% endblock main %}

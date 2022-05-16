@@ -13,4 +13,8 @@ urlpatterns = [
     path('home', views.home_view, name='home'),
     path('index', views.index_view, name='index'),
     path('projetos', views.projetos_view, name='projetos'),
+    path('blog', views.blog_view, name='blog'),
+    path('nova', views.view_novo_post, name='nova'),
+    path('edita/<int:post_id>', views.view_editar_post, name='edita'),
+
 ]

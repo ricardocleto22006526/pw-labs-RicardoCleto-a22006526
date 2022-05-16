@@ -76,3 +76,22 @@
     left: 25px;
 }
 
+.Socials{
+    margin-top: 25px;
+}
+
+.Socials a {
+    margin-left: 5px;
+    color: DarkGreen;
+}
+
+.Socials a:hover {
+    color: DarkTurquoise;
+}
+
+.divisoria{
+    margin-left: 5px;
+    color: seagreen;
+}
+
+
