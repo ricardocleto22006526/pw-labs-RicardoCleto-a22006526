@@ -81,3 +81,8 @@ def view_editar_post(request, post_id):
     context = {'form': form, 'post_id': post_id}
     return render(request, 'portfolio/edita.html', context)
 
+
+def view_apaga_post(request, post_id):
+    Post.objects.get(id=post_id).delete()
+    return HttpResponseRedirect(reverse('portfolio:blog'))
+

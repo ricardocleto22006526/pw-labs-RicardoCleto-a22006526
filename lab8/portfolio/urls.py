@@ -16,5 +16,5 @@ urlpatterns = [
     path('blog', views.blog_view, name='blog'),
     path('nova', views.view_novo_post, name='nova'),
     path('edita/<int:post_id>', views.view_editar_post, name='edita'),
-
+    path('apaga/<int:post_id>', views.view_apaga_post, name='apaga'),
 ]

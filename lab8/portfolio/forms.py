@@ -20,6 +20,6 @@ class PostForm(ModelForm):
         }
 
         labels = {
-            'titulo': 'Título',
+            'autor': 'Autor',
             'concluido': 'Concluído',
         }

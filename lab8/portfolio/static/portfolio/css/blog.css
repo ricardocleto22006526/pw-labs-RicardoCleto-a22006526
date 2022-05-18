@@ -1,7 +1,11 @@
 .container{
     display: block;
+    --background-size: 100% 100%;
+    --background-color: seagreen;
+    background-image: url("../images/fundoBlog.gif");
+    background-position: center;
     background-size: 100% 100%;
-    background-color: seagreen;
+    --background-repeat: no-repeat;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -20,7 +24,7 @@
 
 .divRetangulos div{
     width: 95%;
-    height: 150px;
+    height: auto;
     box-shadow: 5px 2px 3px 7px black;
     border-radius: 10px;
     background-color: LightGray;
@@ -46,3 +50,39 @@
 .btn1:hover{
     transform: scale(1.1);
 }
+
+.divRetangulos div p{
+    margin-left: 25px;
+}
+
+.divRetangulos div .editar{
+    margin-left: 95%;
+    color: #00b300;
+}
+
+
+.divRetangulos div .apagar{
+    margin-left: 95%;
+    color: #00b300;
+}
+
+
+.divRetangulos div p:nth-child(1){
+    margin-left: 15px;
+    font-size: 27px;
+}
+
+.divRetangulos div p:nth-child(2){
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.divRetangulos div p:nth-child(3){
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+
+
+
+
