@@ -10,21 +10,23 @@
 
 .divRetangulos{
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(3, 100px);
-   margin-top: 65px;
+   grid-template-columns: repeat(1, 1fr);
+   grid-template-rows: repeat(1, auto);
+   margin-top: 100px;
    margin-left: 20px;
    padding: 30px;
+   gap: 30px;
 }
 
 .divRetangulos div{
-    width: 400px;
-    height: 500px;
+    width: 95%;
+    height: 450px;
     box-shadow: 5px 2px 3px 7px black;
     border-radius: 10px;
     background-color: LightGray;
     padding: 20px;
     margin: 7px;
+
 }
 
 .textoDentroDivRetangulos h3{
@@ -55,7 +57,7 @@
 
 
 .colorizedSpanECTS{
-    color: LightSeaGreen;
+    color: Black;
 }
 
 
@@ -64,20 +66,64 @@
 }
 
 .infoExtra{
-    margin-left: 55px;
-    margin-bot: 40px;
-    margin-top: 225px;
     color: white;
 }
 
-.infoExtraDiv{
-    height: auto;
-}
-
-.infoExtraDiv a{
+.infoExtra a{
     color: aquamarine;
 }
 
-.infoExtraDiv a:hover{
+.infoExtra a:hover{
     color: white;
 }
+
+.divRetangulos div .semestres{
+    background-color: GreenYellow;
+    position: relative;
+    width: 550px;
+    height: 200px;
+    margin-left: 2%;
+}
+
+.divRetangulos div .semestres2{
+    background-color: GreenYellow;
+    position: relative;
+    width: 550px;
+    height: 200px;
+    margin-left: 54%;
+    bottom: 55%;
+}
+
+.backgroundRelativo{
+    position: relative;
+}
+
+.SubtitulotitulosCadaAno{
+   font-size: 20px;
+}
+
+.tituloCadaAno{
+   font-size: 25px;
+}
+
+.divRetangulos div .semestres a{
+    color: Black;
+}
+
+.divRetangulos div .semestres2 a{
+    color: Black;
+}
+
+.divRetangulos div .semestres a:hover{
+    color: White;
+}
+
+.divRetangulos div .semestres2 a:hover{
+    color: White;
+}
+
+.divisoria{
+    margin-left: 5px;
+    color: Black;
+}
+
