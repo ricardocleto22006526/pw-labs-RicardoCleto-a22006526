@@ -2,6 +2,7 @@
     display: block;
     background-size: 100% 100%;
     background-color: seagreen;
+    background-repeat: repeat;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -19,7 +20,7 @@
 
 .divRetangulos div{
     width: 95%;
-    height: 650px;
+    height: 715px;
     box-shadow: 5px 2px 3px 7px black;
     border-radius: 10px;
     background-color: LightGray;
@@ -102,4 +103,11 @@
     color: DarkTurquoise;
 }
 
+.Socials .NoClass{
+    color: DarkGreen;
+}
+
+.Socials .NoClass:hover{
+    color: DarkGreen;
+}
 
