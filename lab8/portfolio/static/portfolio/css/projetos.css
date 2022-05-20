@@ -21,7 +21,7 @@
 .divRetangulos div{
     width: auto;
     height: auto;
-    box-shadow: 5px 2px 3px 7px black;
+    box-shadow: 5px 2px 3px 7px Black;
     border-radius: 10px;
     background-color: LightGray;
     padding: 20px;
@@ -55,3 +55,23 @@
 .imagemProjetos{
     margin-left: 32%;
 }
+
+
+.linkGitHub {
+    margin-left: 5px;
+    color: DarkGreen;
+}
+
+.linkGitHub:hover {
+    color: DarkTurquoise;
+}
+
+.textoDentroDivRetangulos div{
+    height: auto;
+    width: 350px;
+    position: relative;
+    margin-left: 20%;
+}
+
+
+
