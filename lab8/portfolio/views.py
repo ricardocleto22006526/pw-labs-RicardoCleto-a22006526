@@ -5,9 +5,11 @@ from django.urls import reverse
 
 
 # Create your views here.
-from portfolio.forms import PostForm
-from portfolio.models import Post
-
+from .forms import PostForm
+from .models import Post
+from .models import Quizz
+from .forms import QuizzForm
+from .funcoesQuizz import desenha_grafico_resultados
 
 def about_view(request):
     return render(request, 'portfolio/about.html')
@@ -55,7 +57,21 @@ def blog_view(request):
 
 
 
+def quizz_view(request):
 
+    desenha_grafico_resultados(Quizz.objects.all())
+
+    form = QuizzForm(request.POST, use_required_attribute=False)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect(request.path_info)
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'portfolio/quizz.html', context)
 
 
 def view_novo_post(request):
