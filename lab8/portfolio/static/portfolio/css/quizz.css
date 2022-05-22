@@ -21,8 +21,8 @@
 }
 
 .divRetangulos div{
-    width: 500px;
-    height: 350px;
+    width: auto;
+    height: auto;
     box-shadow: 5px 2px 3px 7px black;
     border-radius: 10px;
     background-color: LightGray;
@@ -31,24 +31,41 @@
     padding-left: 50px;
 }
 
-.btn{
+.btnSubmit{
     margin-top: 20px;
+    background-color: Green;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .7s;
 }
 
-.divRetangulos div .graph{
-    margin-top: 500px;
-}
-
-.graph{
-    margin-top: 500px;
-}
-
-.divRetangulos div img{
-    height: 300px;
-    width: 300px;
+.btnSubmit:hover{
+    transform: scale(1.1);
 }
 
 
+.divRetangulos .post2{
+    height: auto;
+    width: auto;
+    margin-top: -100px;
+}
 
+.divRetangulos .post{
+    height: auto;
+    width: 600px;
+    margin-left: 35%;
+}
+
+form{
+    margin-left: 50px;
+}
+
+input{
+    width: 50px;
+}
 
 
