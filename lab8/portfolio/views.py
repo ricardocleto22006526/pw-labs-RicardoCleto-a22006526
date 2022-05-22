@@ -3,13 +3,13 @@ from django.shortcuts import render
 import datetime
 from django.urls import reverse
 
-
 # Create your views here.
 from .forms import PostForm
 from .models import Post
 from .models import Quizz
 from .forms import QuizzForm
 from .funcoesQuizz import desenha_grafico_resultados
+
 
 def about_view(request):
     return render(request, 'portfolio/about.html')
@@ -49,16 +49,15 @@ def index_view(request):
 def projetos_view(request):
     return render(request, 'portfolio/projetos.html')
 
-def blog_view(request):
 
+def blog_view(request):
     context = {'post': Post.objects.all()}
 
     return render(request, 'portfolio/blog.html', context)
 
 
-
+# PÁGINA DO QUIZZ
 def quizz_view(request):
-
     desenha_grafico_resultados(Quizz.objects.all())
 
     form = QuizzForm(request.POST, use_required_attribute=False)
@@ -74,6 +73,7 @@ def quizz_view(request):
     return render(request, 'portfolio/quizz.html', context)
 
 
+# PÁGINAS DO BLOG
 def view_novo_post(request):
     form = PostForm(request.POST or None)
 
@@ -86,7 +86,6 @@ def view_novo_post(request):
 
 
 def view_editar_post(request, post_id):
-
     post = Post.objects.get(id=post_id)
     form = PostForm(request.POST or None, instance=post)
 
@@ -101,4 +100,3 @@ def view_editar_post(request, post_id):
 def view_apaga_post(request, post_id):
     Post.objects.get(id=post_id).delete()
     return HttpResponseRedirect(reverse('portfolio:blog'))
-
