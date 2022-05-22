@@ -1,5 +1,5 @@
-from .models import Quizz
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as graficos
+
 
 def informacao_sobre_utilizadores(objetos):
     dados = {}
@@ -8,23 +8,24 @@ def informacao_sobre_utilizadores(objetos):
 
     return dados
 
+
 def desenha_grafico_resultados(objetos):
-    # creating the dataset
     dados = informacao_sobre_utilizadores(objetos)
 
-    pessoa = list(dados.keys())
-    pontuacao = list(dados.values())
+    dadosOrdenados = dict(sorted(dados.items(), key=lambda item: item[1], reverse=False))
 
-    figuraOutput = plt.figure(figsize=(5, 5))
+    pessoa = list(dadosOrdenados.keys())
+    pontuacao = list(dadosOrdenados.values())
 
-    # creating the bar plot
-    plt.bar(pessoa, pontuacao, color='green',
-            width=0.9)
+    graficos.figure(figsize=(13, 5))
 
-    plt.xlabel("Nome dos participantes")
-    plt.ylabel("Pontuação")
-    plt.title("Pontuação dos participantes!")
-    plt.savefig('portfolio/static/portfolio/images/grafico_final.png')
+    graficos.barh(pessoa, pontuacao, color='green')
+
+    graficos.title("Pontuação dos participantes!")
+    graficos.ylabel("Nome dos participantes")
+    graficos.xlabel("Pontuação")
+
+    graficos.savefig('portfolio/static/portfolio/images/grafico_final.png')
 
 
 def QuizzPontuacao(input):
@@ -39,7 +40,7 @@ def QuizzPontuacao(input):
     if input.pergunta3 == 1989:
         pontuacaoDaPessoa += 4
 
-    if input.pergunta4 == "framework":
+    if input.pergunta4.lower() == "framework":
         pontuacaoDaPessoa += 4
 
     if input.pergunta5 == 2005:
