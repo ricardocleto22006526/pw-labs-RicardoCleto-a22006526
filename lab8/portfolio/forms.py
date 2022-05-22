@@ -37,22 +37,27 @@ class QuizzForm(ModelForm):
         model = Quizz
         fields = '__all__'
 
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Insira o seu nome'}),
+        }
+
         labels = {
 
             'nome': 'Qual o seu nome?',
 
             'pergunta1': 'Em que ano foi criado o HTML?', # Em que ano foi criado o HTML (1991)
 
-            'pergunta2': 'Em que ano foi criado o CSS',  # Em que ano foi criado o CSS (1994)
+            'pergunta2': 'Em que ano foi criado o CSS?',  # Em que ano foi criado o CSS (1994)
 
-            'pergunta3': 'Em que ano foi criado o Python', # Em que ano foi criado o Python (1989)
+            'pergunta3': 'Em que ano foi criado o Python?', # Em que ano foi criado o Python (1989)
 
             'pergunta4': 'O que é o Django?', # O que é o Django? (framework)
 
-            'pergunta5': 'Em que ano foi criado o Django? ', # Em que ano foi criado o Django? (2005)
+            'pergunta5': 'Em que ano foi criado o Django?', # Em que ano foi criado o Django? (2005)
 
         }
 
         help_texts = {
-            'pergunta4': '(escreva em minusculas)',
         }
+
+
