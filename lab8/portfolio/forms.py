@@ -2,10 +2,12 @@ from django.forms import ModelForm
 from django import forms
 from .models import Post
 from .models import Quizz
+from .models import Pessoa
+from .models import Projetos
+from .models import Formacao
 
 
 class PostForm(ModelForm):
-
     class Meta:
         model = Post
         fields = '__all__'
@@ -45,15 +47,15 @@ class QuizzForm(ModelForm):
 
             'nome': 'Qual o seu nome?',
 
-            'pergunta1': 'Em que ano foi criado o HTML?', # Em que ano foi criado o HTML (1991)
+            'pergunta1': 'Em que ano foi criado o HTML?',  # Em que ano foi criado o HTML (1991)
 
             'pergunta2': 'Em que ano foi criado o CSS?',  # Em que ano foi criado o CSS (1994)
 
-            'pergunta3': 'Em que ano foi criado o Python?', # Em que ano foi criado o Python (1989)
+            'pergunta3': 'Em que ano foi criado o Python?',  # Em que ano foi criado o Python (1989)
 
-            'pergunta4': 'O que é o Django?', # O que é o Django? (framework)
+            'pergunta4': 'O que é o Django?',  # O que é o Django? (framework)
 
-            'pergunta5': 'Em que ano foi criado o Django?', # Em que ano foi criado o Django? (2005)
+            'pergunta5': 'Em que ano foi criado o Django?',  # Em que ano foi criado o Django? (2005)
 
         }
 
@@ -61,3 +63,110 @@ class QuizzForm(ModelForm):
         }
 
 
+class PessoaForm(ModelForm):
+    class Meta:
+        model = Pessoa
+        fields = '__all__'
+
+        widgets = {
+            'nome': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Insira o seu nome'}),
+        }
+
+        labels = {
+
+            'nome': 'Qual o seu nome?',
+
+            'link_linkedin': 'Se desejar, insira o seu link do linkedIn',
+
+        }
+
+        help_texts = {
+        }
+
+
+class ProjetosForm(ModelForm):
+    class Meta:
+        model = Projetos
+        fields = '__all__'
+
+        widgets = {
+        }
+
+        labels = {
+
+            'imagem': 'Insira uma foto do seu projeto',
+
+            'descricao': 'Insira a descrição do projeto',
+
+            'cadeira': 'Qual a cadeira pertecente ao projeto',
+
+            'ano_realizacao': 'Indique o ano de realização do projeto',
+
+            'participantes': 'Participantes:',
+
+            'link_github': 'Link do GitHub do projeto',
+
+        }
+
+        help_texts = {
+        }
+
+
+class FormacaoForm(ModelForm):
+    class Meta:
+        model = Formacao
+        fields = '__all__'
+
+        widgets = {
+            'semestre': forms.NumberInput(attrs={'min': '1', 'max': '2'}),
+        }
+
+        labels = {
+
+            'nome_da_cadeira': 'Insira o nome da cadeira',
+
+            'ano': 'Insira o ano da cadeira',
+
+            'semestre': 'Insira o semestre da cadeira',
+
+            'ects': 'Indique quantos ECTS vale a cadeira',
+
+            'avaliacao': 'Indique a sua opinião sobre a cadeira',
+
+            'total_ects': 'Indique o total de ECTS do semestre',
+
+        }
+
+        help_texts = {
+            'avaliacao': 'Utilize entre 1 a 5 (★)',
+        }
+
+
+class FormacaoCadeirasForm(ModelForm):
+    class Meta:
+        model = Formacao
+        fields = '__all__'
+
+        widgets = {
+            'semestre': forms.NumberInput(attrs={'min': '1', 'max': '2'}),
+        }
+
+        labels = {
+
+            'nome_da_cadeira': 'Insira o nome da cadeira',
+
+            'ano': 'Insira o ano da cadeira',
+
+            'semestre': 'Insira o semestre da cadeira',
+
+            'ects': 'Indique quantos ECTS vale a cadeira',
+
+            'avaliacao': 'Indique a sua opinião sobre a cadeira',
+
+            'total_ects': 'Indique o total de ECTS do semestre',
+
+        }
+
+        help_texts = {
+            'avaliacao': 'Utilize entre 1 a 5 (★)',
+        }
