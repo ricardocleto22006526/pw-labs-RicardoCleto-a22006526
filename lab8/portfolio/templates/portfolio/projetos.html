@@ -13,229 +13,53 @@
 <div class="container">
     <div class="divRetangulos">
 
-        <div class="textoDentroDivRetangulos">
+        {% for projetosS in projetos %}
 
-            <h3> <u> Xadrez </u> </h3>
+            <div class="textoDentroDivRetangulos">
 
-            <br>
-            <div class="divImage">
-                <img src="../static/portfolio/images/xadrez.png" alt="ERROR" style="margin-left: 8%;" width="300" height="300">
+                <h3> <u> {{projetosS.nome_do_projeto}} </u> </h3>
+
+                <br>
+                <div class="divImage">
+                    {% load static %}
+                    <img src="{{projetosS.imagem.url}}" alt="ERROR" style="margin-left: 8%;" width="300" height="300">
+                </div>
+                <br><br>
+
+                <p>
+                    <span> Descrição: </span>
+                    {{projetosS.descricao}}
+                </p>
+
+                <br><br>
+
+                <p>
+                    <span> Cadeira: </span> {{projetosS.cadeira}}
+                </p>
+
+                <br><br>
+
+                <p>
+                    <span> Ano de realização: </span> {{projetosS.ano_realizacao}}
+                </p>
+
+                <br><br>
+
+                <p>
+                    <span> Participantes: </span>
+                        {% for pessoas in projetosS.participantes.all %}
+                            <ol>
+                                <ol class="tabNomes">➥ {{ pessoas }} </ol>
+                            </ol>
+                        {% endfor %}
+                </p>
+
+                <br>
+
+                <p> <span> Download (or GitHub): <a href="{{projetosS.link_github}}" class="linkGitHub"> Click here </a> </span>  </p>
+
             </div>
-            <br><br>
-
-            <p>
-                <span> Descrição: </span>
-                Projeto que tem como objetivo imitar a jogabilidade de um jogo de xadrez, havendo pequenas diferenças a nivel de regras
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Cadeira: </span> Fundamentos de Programação
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Ano de realização: </span> 2020
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Participantes: </span>
-                <ol>
-                    <ol class="tabNomes">➥ Ricardo Cleto</ol>
-                    <ol class="tabNomes">➥ Rodrigo Amaro</ol>
-                </ol>
-            </p>
-
-            <br>
-
-            <p> <span> Download (or GitHub): <a href="https://github.com/ricardocleto22006526/Xadrez-Fundamentos-de-Programacao" class="linkGitHub"> Click here </a></span>  </p>
-
-        </div>
-
-        <div class="textoDentroDivRetangulos">
-
-            <h3> <u> Base de Dados Musical </u> </h3>
-
-            <br>
-            <div class="divImage">
-                <img src="../static/portfolio/images/BaseDeDadosMusical.png" alt="ERROR" style="margin-left: 8%;" width="300" height="300">
-            </div>
-            <br><br>
-
-            <p>
-                <span> Descrição: </span>
-                Projeto que consiste na procura de informações sobre musicas inseridas na base de dados (Formulação de uma base de
-                dados em Java, com intuição de simular querys em SQL)
-
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Cadeira: </span> Algoritmia e Estrutura de Dados
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Ano de realização: </span> 2020
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Participantes: </span>
-                <ol>
-                    <ol class="tabNomes">➥ Ricardo Cleto</ol>
-                    <ol class="tabNomes">➥ Rodrigo Amaro</ol>
-                </ol>
-            </p>
-
-            <br>
-
-            <p> <span> Download (or GitHub): <a href="https://github.com/ricardocleto22006526/BaseDeDadosMusical-AED-" class="linkGitHub"> Click here </a></span>  </p>
-
-        </div>
-
-        <div class="textoDentroDivRetangulos">
-
-            <h3> <u> MineSweeper </u> </h3>
-
-            <br>
-            <div class="divImage">
-                <img src="../static/portfolio/images/bombroad.png" alt="ERROR" style="margin-left: 8%;" width="300" height="300">
-            </div>
-            <br><br>
-
-            <p>
-                <span> Descrição: </span>
-                Jogo que tem como objetivo plantar e rebentar as bombas, emitando o famoso jogo MineSweeper
-
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Cadeira: </span> Linguagens de Programação 1
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Ano de realização: </span> 2020
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Participantes: </span>
-                <ol>
-                    <ol class="tabNomes">➥ Ricardo Cleto</ol>
-                </ol>
-            </p>
-
-            <br>
-
-            <p> <span> Download (or GitHub): <a href="https://github.com/ricardocleto22006526/MineSweeper-LP1-" class="linkGitHub"> Click here </a></span>  </p>
-
-        </div>
-
-        <div class="textoDentroDivRetangulos">
-
-            <h3> <u> Jogo da Glória </u> </h3>
-
-            <br>
-            <div class="divImage">
-                <img src="../static/portfolio/images/jogoGloria.png" alt="ERROR" style="margin-left: 8%;" width="300" height="300">
-            </div>
-
-            <br><br>
-
-            <p>
-                <span> Descrição: </span>
-                O jogo tem como objetivo chegar à casa final do tabuleiro para vencer, entretanto pelo caminho, os peões
-                encontram abismos e ferramentas que alteram a sua jogabilidade em cada ronda
-
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Cadeira: </span> Linguagens de Programação 2
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Ano de realização: </span> 2021
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Participantes: </span>
-                <ol>
-                    <ol class="tabNomes">➥ Ricardo Cleto</ol>
-                    <ol class="tabNomes">➥ Rodrigo Amaro</ol>
-                </ol>
-            </p>
-
-            <br>
-
-            <p> <span> Download (or GitHub): <a href="https://github.com/ricardocleto22006526/LP2-22006526-22004525" class="linkGitHub"> Click here </a></span>  </p>
-
-        </div>
-
-        <div class="textoDentroDivRetangulos">
-
-            <h3> <u> Trajetória de uma bola de Voleibol </u> </h3>
-
-            <br>
-            <div class="divImage">
-                <img src="../static/portfolio/images/Voleibol.png" alt="ERROR" style="margin-left: 8%;" width="300" height="300">
-            </div>
-
-            <br><br>
-
-            <p>
-                <span> Descrição: </span>
-                Jogo que simula a trajetória de uma bola de voleibol
-
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Cadeira: </span> Fundamentos de Física
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Ano de realização: </span> 2020
-            </p>
-
-            <br><br>
-
-            <p>
-                <span> Participantes: </span>
-                <ol>
-                    <ol class="tabNomes">➥ Ricardo Cleto</ol>
-                    <ol class="tabNomes">➥ Rodrigo Amaro</ol>
-                    <ol class="tabNomes">➥ Daniel Granja</ol>
-                    <ol class="tabNomes">➥ Mário Silva</ol>
-                </ol>
-            </p>
-
-            <br>
-
-            <p> <span> Download (or GitHub): <a href="https://github.com/ricardocleto22006526/Trajetoria-de-uma-bola-de-Voleibol-FundFisica-" class="linkGitHub"> Click here </a></span>  </p>
-
-        </div>
+        {% endfor %}
 
     </div>
 
