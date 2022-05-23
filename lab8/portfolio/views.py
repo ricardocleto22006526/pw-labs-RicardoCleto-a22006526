@@ -7,7 +7,10 @@ from django.urls import reverse
 from .forms import PostForm
 from .models import Post
 from .models import Quizz
+from .forms import Projetos
 from .forms import QuizzForm
+from .forms import Formacao
+
 from .funcoesQuizz import desenha_grafico_resultados
 
 
@@ -24,7 +27,9 @@ def competencias_view(request):
 
 
 def formacao_view(request):
-    return render(request, 'portfolio/formação.html')
+    context = {'formacao': Formacao.objects.all()}
+
+    return render(request, 'portfolio/formação.html', context)
 
 
 def home_view(request):
@@ -47,7 +52,9 @@ def index_view(request):
 
 
 def projetos_view(request):
-    return render(request, 'portfolio/projetos.html')
+    context = {'projetos': Projetos.objects.all(), 'pessoa': Projetos.participantes}
+
+    return render(request, 'portfolio/projetos.html', context)
 
 
 def blog_view(request):
