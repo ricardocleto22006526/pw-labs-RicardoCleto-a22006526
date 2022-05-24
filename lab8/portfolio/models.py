@@ -68,3 +68,26 @@ class Formacao(models.Model):
 
     def __str__(self):
         return f"O {self.ano} ano tem {self.total_ects} ECTS"
+
+
+class Noticias(models.Model):
+    titulo = models.CharField(max_length=100)
+    descricao = models.CharField(max_length=400)
+    imagem = models.ImageField(upload_to='media/', null=True)
+    link_noticia = models.URLField(max_length=200, blank=True)
+
+    def __str__(self):
+        return f"Noticia: {self.titulo}"
+
+
+class Tecnologias(models.Model):
+    nome = models.CharField(max_length=50)
+    acronimo = models.CharField(max_length=20)
+    ano_criacao = models.IntegerField(default=0)
+    criador = models.CharField(max_length=100)
+    logotipo = models.ImageField(upload_to='media/', null=True)
+    link_oficial = models.URLField(max_length=200, blank=True)
+    descricao = models.CharField(max_length=400)
+
+    def __str__(self):
+        return f"Tecnologia: {self.nome}"

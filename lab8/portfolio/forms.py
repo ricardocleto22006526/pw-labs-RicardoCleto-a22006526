@@ -6,6 +6,8 @@ from .models import Pessoa
 from .models import Projetos
 from .models import Formacao
 from .models import Cadeiras
+from .models import Noticias
+from .models import Tecnologias
 
 
 class PostForm(ModelForm):
@@ -164,4 +166,59 @@ class CadeirasForm(ModelForm):
 
         help_texts = {
             'total_ects': 'Soma de todos os ECTS deste semestre',
+        }
+
+
+class NoticiasForm(ModelForm):
+    class Meta:
+        model = Noticias
+        fields = '__all__'
+
+        widgets = {
+        }
+
+        labels = {
+
+            'titulo': 'Insira o titulo da noticia',
+
+            'descricao': 'Insira o texto da noticia',
+
+            'imagem': 'Insira a imagem da noticia',
+
+            'link_noticia': 'Insira o link da noticia',
+
+        }
+
+        help_texts = {
+        }
+
+
+class TecnologiasForm(ModelForm):
+    class Meta:
+        model = Tecnologias
+        fields = '__all__'
+
+        widgets = {
+        }
+
+        labels = {
+
+            'nome': 'Insira o nome completo da tecnologia',
+
+            'acronimo': 'Insira o acronimo',
+
+            'ano_criacao': 'Insira a data de criação da tecnologia',
+
+            'criador': 'Insira o criador',
+
+            'logotipo': 'Insira o logotipo',
+
+            'link_oficial': 'Insira o link da pagina oficial',
+
+            'descricao': 'Insira uma pequena descricao',
+
+        }
+
+        help_texts = {
+
         }

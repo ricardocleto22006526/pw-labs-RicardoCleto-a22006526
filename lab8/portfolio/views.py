@@ -10,7 +10,8 @@ from .models import Quizz
 from .forms import Projetos
 from .forms import QuizzForm
 from .forms import Formacao
-from .forms import Cadeiras
+from .forms import Noticias
+from .forms import Tecnologias
 
 
 from .funcoesQuizz import desenha_grafico_resultados
@@ -51,6 +52,12 @@ def home_view(request):
 
 def index_view(request):
     return render(request, 'portfolio/layout.html')
+
+
+def programacaoWeb_view(request):
+    context = {'noticias': Noticias.objects.all(), 'tecnologias': Tecnologias.objects.all()}
+
+    return render(request, 'portfolio/programacaoWeb.html', context)
 
 
 def projetos_view(request):

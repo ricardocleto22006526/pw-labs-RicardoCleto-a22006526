@@ -18,4 +18,5 @@ urlpatterns = [
     path('edita/<int:post_id>', views.view_editar_post, name='edita'),
     path('apaga/<int:post_id>', views.view_apaga_post, name='apaga'),
     path('quizz', views.quizz_view, name='quizz'),
+    path('programacaoWeb', views.programacaoWeb_view, name='programacaoWeb'),
 ]
