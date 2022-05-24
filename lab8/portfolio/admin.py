@@ -7,6 +7,8 @@ from .models import Pessoa
 from .models import Projetos
 from .models import Formacao
 from .models import Cadeiras
+from .models import Noticias
+from .models import Tecnologias
 
 
 class ProjetosHorizontal(admin.ModelAdmin):
@@ -23,3 +25,5 @@ admin.site.register(Pessoa)
 admin.site.register(Projetos, ProjetosHorizontal)
 admin.site.register(Formacao, CadeirasHorizontal)
 admin.site.register(Cadeiras)
+admin.site.register(Noticias)
+admin.site.register(Tecnologias)
