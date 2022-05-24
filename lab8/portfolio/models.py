@@ -50,14 +50,21 @@ class Projetos(models.Model):
         return f"{self.nome_do_projeto}"
 
 
-class Formacao(models.Model):
-    ano = models.IntegerField(default=0)
-    semestre = models.IntegerField(default=1)
-    total_ects = models.CharField(max_length=100)
+class Cadeiras(models.Model):
     nome_da_cadeira = models.CharField(max_length=100)
+    semestre = models.IntegerField(default=1)
     ects = models.IntegerField(default=0)
-    avaliacao = models.CharField(max_length=100)
+    avaliacao = models.CharField(max_length=100, blank=True)
     link_cadeira = models.URLField(max_length=200, blank=True)
 
     def __str__(self):
-        return f"{self.ano}"
+        return f"{self.nome_da_cadeira}"
+
+
+class Formacao(models.Model):
+    ano = models.IntegerField(default=0)
+    cadeiras = models.ManyToManyField(Cadeiras)
+    total_ects = models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"O {self.ano} ano tem {self.total_ects} ECTS"

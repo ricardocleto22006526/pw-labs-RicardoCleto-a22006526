@@ -5,6 +5,7 @@ from .models import Quizz
 from .models import Pessoa
 from .models import Projetos
 from .models import Formacao
+from .models import Cadeiras
 
 
 class PostForm(ModelForm):
@@ -125,8 +126,6 @@ class FormacaoForm(ModelForm):
 
             'nome_da_cadeira': 'Insira o nome da cadeira',
 
-            'ano': 'Insira o ano da cadeira',
-
             'semestre': 'Insira o semestre da cadeira',
 
             'ects': 'Indique quantos ECTS vale a cadeira',
@@ -135,6 +134,9 @@ class FormacaoForm(ModelForm):
 
             'total_ects': 'Indique o total de ECTS do semestre',
 
+            'link_cadeira': 'Indique o link da cadeira',
+
+
         }
 
         help_texts = {
@@ -142,31 +144,24 @@ class FormacaoForm(ModelForm):
         }
 
 
-class FormacaoCadeirasForm(ModelForm):
+class CadeirasForm(ModelForm):
     class Meta:
-        model = Formacao
+        model = Cadeiras
         fields = '__all__'
 
         widgets = {
-            'semestre': forms.NumberInput(attrs={'min': '1', 'max': '2'}),
         }
 
         labels = {
 
-            'nome_da_cadeira': 'Insira o nome da cadeira',
-
             'ano': 'Insira o ano da cadeira',
 
-            'semestre': 'Insira o semestre da cadeira',
-
-            'ects': 'Indique quantos ECTS vale a cadeira',
-
-            'avaliacao': 'Indique a sua opinião sobre a cadeira',
+            'cadeiras': 'Insira as cadeiras que pretende',
 
             'total_ects': 'Indique o total de ECTS do semestre',
 
         }
 
         help_texts = {
-            'avaliacao': 'Utilize entre 1 a 5 (★)',
+            'total_ects': 'Soma de todos os ECTS deste semestre',
         }

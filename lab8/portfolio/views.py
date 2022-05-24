@@ -10,6 +10,8 @@ from .models import Quizz
 from .forms import Projetos
 from .forms import QuizzForm
 from .forms import Formacao
+from .forms import Cadeiras
+
 
 from .funcoesQuizz import desenha_grafico_resultados
 
@@ -27,7 +29,7 @@ def competencias_view(request):
 
 
 def formacao_view(request):
-    context = {'formacao': Formacao.objects.all()}
+    context = {'formacao': Formacao.objects.all(), 'cadeiras': Formacao.cadeiras}
 
     return render(request, 'portfolio/formação.html', context)
 
